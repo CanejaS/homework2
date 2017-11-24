@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="FinalExamDemo">
+  <ClassDiagramComponents>
+    <Class name="CurvedActivity" package="finalexamdemo" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="rawScore" type="double" visibility="package"/>
+        <Field name="percentage" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="percent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setScore" returnType="void" visibility="public">
+          <Argument type="double" name="s"/>
+        </Method>
+        <Method name="getRawScore" returnType="double" visibility="public"/>
+        <Method name="getPercentage" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CurvedActivityDemo" package="finalexamdemo" visibility="public" xPosition="493.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FinalExam" package="finalexamdemo" visibility="public" xPosition="268.0" yPosition="292.0">
+      <Fields>
+        <Field name="numQuestions" type="int" visibility="private"/>
+        <Field name="pointsEach" type="double" visibility="private"/>
+        <Field name="numMissed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="questions"/>
+          <Argument type="int" name="missed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPointsEach" returnType="double" visibility="public"/>
+        <Method name="getNumMissed" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FinalExamDemo" package="finalexamdemo" visibility="public" xPosition="493.0" yPosition="134.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GradedActivity" package="finalexamdemo" visibility="public" xPosition="41.0" yPosition="309.0">
+      <Fields>
+        <Field name="score" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setScore" returnType="void" visibility="public">
+          <Argument type="double" name="s"/>
+        </Method>
+        <Method name="getScore" returnType="double" visibility="public"/>
+        <Method name="getGrade" returnType="char" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PassFailActivity" package="finalexamdemo" visibility="public" xPosition="35.0" yPosition="519.0">
+      <Fields>
+        <Field name="minPassingScore" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="mps"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGrade" returnType="char" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PassFailExam" package="finalexamdemo" visibility="public" xPosition="282.0" yPosition="506.0">
+      <Fields>
+        <Field name="numQuestions" type="int" visibility="private"/>
+        <Field name="pointsEach" type="double" visibility="private"/>
+        <Field name="numMissed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="questions"/>
+          <Argument type="int" name="missed"/>
+          <Argument type="double" name="minPassing"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPointsEach" returnType="double" visibility="public"/>
+        <Method name="getNumMissed" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PassFailExamDemo" package="finalexamdemo" visibility="public" xPosition="264.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PolymorphismExample" package="finalexamdemo" visibility="public" xPosition="268.0" yPosition="134.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="finalexamdemo.CurvedActivity" target="finalexamdemo.GradedActivity"/>
+    <IsRelation name="is" source="finalexamdemo.FinalExam" target="finalexamdemo.GradedActivity"/>
+    <IsRelation name="is" source="finalexamdemo.PassFailActivity" target="finalexamdemo.GradedActivity"/>
+    <IsRelation name="is" source="finalexamdemo.PassFailExam" target="finalexamdemo.PassFailActivity"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

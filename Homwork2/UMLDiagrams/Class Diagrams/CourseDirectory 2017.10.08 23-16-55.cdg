@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CourseDirectory">
+  <ClassDiagramComponents>
+    <Class name="Course" package="coursedirectory" visibility="public" xPosition="52.0" yPosition="270.0">
+      <Fields>
+        <Field name="FIUCourseName" type="String" visibility="private"/>
+        <Field name="FLACourseName" type="String" visibility="private"/>
+        <Field name="yearLevel" type="int" visibility="private"/>
+        <Field name="numCredits" type="int" visibility="private"/>
+        <Field name="prerequisites" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="anFIUCourseName"/>
+          <Argument type="String" name="aFLACourseName"/>
+          <Argument type="int" name="aYearLevel"/>
+          <Argument type="int" name="aNumCredits"/>
+          <Argument type="ArrayList&lt;String&gt;" name="myPreReqs"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getFIUCourseName" returnType="String" visibility="public"/>
+        <Method name="setFIUCourseName" returnType="void" visibility="public">
+          <Argument type="String" name="FIUCourseName"/>
+        </Method>
+        <Method name="getFLACourseName" returnType="String" visibility="public"/>
+        <Method name="setFLACourseName" returnType="void" visibility="public">
+          <Argument type="String" name="FLACourseName"/>
+        </Method>
+        <Method name="getYearLevel" returnType="int" visibility="public"/>
+        <Method name="setYearLevel" returnType="void" visibility="public">
+          <Argument type="int" name="yearLevel"/>
+        </Method>
+        <Method name="getNumCredits" returnType="int" visibility="public"/>
+        <Method name="setNumCredits" returnType="void" visibility="public">
+          <Argument type="int" name="numCredits"/>
+        </Method>
+        <Method name="getPrerequisites" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="setPrerequisites" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="prerequisites"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Object" name="other"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CourseDirectory" package="coursedirectory" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="courses" type="ArrayList&lt;Course&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="createFIUCourses" returnType="void" visibility="public"/>
+        <Method name="displayMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="courses" source="coursedirectory.CourseDirectory" target="coursedirectory.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Course&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

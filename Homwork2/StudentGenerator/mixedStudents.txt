@@ -1,0 +1,8 @@
+C 987654 Chin 4.0 1
+C 876543 Amir 2.75 2
+C 765432 Zensky 3.6 3
+C 654321 Rodriguez 3.1 4
+K 123456 Smith .85 9
+K 234567 Jones .73 10
+K 345678 Garcia .64 11
+K 456789 Hernandez .96 12

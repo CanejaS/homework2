@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AppointmentInheritance">
+  <ClassDiagramComponents>
+    <Class name="Appointment" package="appointmentinheritance" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="description" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="aDescription"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="occursOn" returnType="boolean" visibility="public" isAbstract="true">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="day"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AppointmentInheritance" package="appointmentinheritance" visibility="public" xPosition="410.0" yPosition="20.0">
+      <Fields>
+        <Field name="myAppointments" type="Appointment[]" visibility="package"/>
+        <Field name="keyboard" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="makeAppointments" returnType="void" visibility="public"/>
+        <Method name="checkAppointments" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Daily" package="appointmentinheritance" visibility="public" xPosition="20.0" yPosition="277.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="occursOn" returnType="boolean" visibility="public">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="day"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Monthly" package="appointmentinheritance" visibility="public" xPosition="330.0" yPosition="277.0">
+      <Fields>
+        <Field name="day" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="day"/>
+          <Argument type="String" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="occursOn" returnType="boolean" visibility="public">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="day"/>
+        </Method>
+        <Method name="getDay" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Onetime" package="appointmentinheritance" visibility="public" xPosition="682.0" yPosition="260.0">
+      <Fields>
+        <Field name="year" type="int" visibility="private"/>
+        <Field name="month" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="day"/>
+          <Argument type="String" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="occursOn" returnType="boolean" visibility="public">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="day"/>
+        </Method>
+        <Method name="getYear" returnType="int" visibility="public"/>
+        <Method name="getMonth" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="appointmentinheritance.Monthly" target="appointmentinheritance.Appointment"/>
+    <IsRelation name="is" source="appointmentinheritance.Onetime" target="appointmentinheritance.Monthly"/>
+    <IsRelation name="is" source="appointmentinheritance.Daily" target="appointmentinheritance.Appointment"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
